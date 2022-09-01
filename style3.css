@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+    color:white;
+}
+h1,h2{
+    color: #ffffff;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 10px;
+    border-bottom: 2px solid #999;
+}
+
+.btn{
+    display: inline-block;
+
+    background:yellowgreen;
+    color:#fff;
+
+    border:.2rem solid yellowgreen;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.btn2{
+    display: inline-block;
+
+    background:darkgreen;
+    color:#fff;
+
+    border:.2rem solid darkgreen;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+
+table{
+    padding: 10px;
+}
+th,td{
+    text-align: left;
+    padding: 8px;
+}
+.side-menu{
+    position: fixed;
+    background: #444;
+    width: 20vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+
+}
+
+.side-menu .HappyGrade{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.7rem;
+    margin-top: 1rem;
+}
+
+.side-menu li{
+
+    font-size: 22px;
+    padding: 10px 40px;
+
+}
+
+.side-menu li:hover{
+    background: #1f8fc3;
+
+    border-radius: 30px 0px 0px 30px;
+}
+
+.container{
+    position: absolute;
+    right: 0;
+    width: 80vw;
+    height: 100vh;
+
+}
+.container .header{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 78.5vw;
+    height: 8vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.container .header .nav{
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.container .header .nav .search{
+    flex:3;
+
+}
+.container .header .nav .search input[type=text] {
+    border: none;
+    padding: 10px;
+    background: #f1f1f1;
+    width: 50%;
+}
+
+.container .content{
+    position: relative;
+    margin-top: 10vh;
+    min-height: 80vh;
+}
+
+.container .content .cards{
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.container .content .cards .card{
+    width: 250px;
+    height: 150px;
+    margin: 20px 10px;
+    background: #f1f1f1;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.20),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.container .content .cards .card img{
+    width: 150px;
+    height:150px;
+}
+.container .content .content-2{
+    min-height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.container .content .content-2 .marks{
+    min-height: 50vh;
+    flex: 5;
+    margin: 0 20px 20px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.20),0 6px 20px 0 rgba(0,0,0,0.19);
+    display: flex;
+    flex-direction: column;
+}
+
+.container .content .content-2 .chat{
+    min-height: 50vh;
+    flex: 2;
+    margin: 0 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.20),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+
+.container .content .cards  .datetime{
+    color: #fff;
+    text-align: center;
+    background: #10101E;
+    font-family: "Segoe UI", sans-serif;
+    width: 250px;
+    height: 150px;
+    padding: 15px 10px;
+    border: 3px solid #2E94E3;
+    border-radius: 5px;
+
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+}
+
+.datetime:hover{
+    background: #2E94E3;
+    box-shadow: 0 0 30px #2E94E3;
+}
+
+.date{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.time{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.time span:not(:last-child){
+    position: relative;
+    margin: 0 6px;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.time span:last-child{
+    background: #2E94E3;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

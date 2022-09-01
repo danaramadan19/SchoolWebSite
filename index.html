@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Grades</title>
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+
+
+</head>
+<body>
+
+<header>
+    <a href="#" class="brand">HappyGrades</a>
+
+     <div class="menu-btn"></div>
+    <div class="navigation">
+
+        <div class="navigation-items">
+            <a href="#home">Home</a>
+
+            <a href="#campus">Campus</a>
+            <a href="#gallery">Gallery</a>
+
+            <a href="#about">About us</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+    <div class="icons">
+        <!------------------لتفعيل كبسة اليوزر----------------->
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+
+</header>
+
+<!-- header section ends -->
+
+
+<!-- login form container  -->
+
+<div class="login-form-container">
+<!----لتفعيل كبسة الاغلاق لا تلمس!--->
+    <i class="fas fa-times" id="form-close"></i>
+<!---------------------------------------------->
+<div class="card">
+    <div class="inner-box" id="card">
+        <div class="card-front">
+            <h2><strong>LOGIN</strong></h2>
+            <form method="post" action="login.php">
+                <input type="text"  name="id" class="input-box" placeholder="Enter your Id" required>
+                <input type="password" name="password" class="input-box" placeholder="Password" required>
+                <button type="submit" class="submit-btn"><strong>Submit</strong></button>
+                <input type="checkbox"><span>Remember Me</span>
+            </form>
+
+            <button type="button" class="btn" onclick="openRegister()"><strong>I'm New Here</strong></button>
+            <a href="">Forget Password</a>
+        </div>
+        <div class="card-back">
+            <h2><strong>REGISTER</strong></h2>
+            <form>
+                <input type="text" class="input-box" placeholder="Enter your Name" required>
+                <input type="email" class="input-box" placeholder="Enter your Email" required>
+                <input type="text" class="input-box" placeholder="Enter your Id" required>
+                <input type="password" class="input-box" placeholder="Password" required>
+
+                <button type="submit" class="submit-btn"><strong>Submit</strong></button>
+
+            </form>
+
+            <button type="button" class="btn" onclick="openLogin()"><strong>I've an account</strong></button>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+
+
+<section class="home" id="home">
+
+    <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="5.mp4" autoplay muted loop></video>
+
+
+    <div class="content active">
+        <h2>Welcome To<br></h2> <h1><span>HappyGrades </span></h1>
+        <p>  Welcome to the university website. This website offers you many important services. If you are a professor, you can log in after obtaining a university number and see the students registered in your subjects. In addition, you can add the grades of the interfaces after correcting them and communicate with the students, and if you are an assistant to the professor. If you are a student, you can register on the university’s website, see the marks of your duties.</p>
+
+    </div>
+
+
+
+    <div class="content">
+        <h2>Professional <br></h2> <h1><span>Professors </span></h1>
+        <p>  Welcome to the university website. This website offers you many important services. If you are a professor, you can log in after obtaining a university number and see the students registered in your subjects. In addition, you can add the grades of the interfaces after correcting them and communicate with the students, and if you are an assistant to the professor. If you are a student, you can register on the university’s website, see the marks of your duties.</p>
+
+    </div>
+
+    <div class="content">
+        <h2>Rich<br></h2> <h1><span>Library</span></h1>
+        <p>  Welcome to the university website. This website offers you many important services. If you are a professor, you can log in after obtaining a university number and see the students registered in your subjects. In addition, you can add the grades of the interfaces after correcting them and communicate with the students, and if you are an assistant to the professor. If you are a student, you can register on the university’s website, see the marks of your duties.</p>
+
+    </div>
+
+    <div class="content">
+        <h2>Until <br> </h2>
+        <h1><span> Graduation </span></h1>
+        <p>  Welcome to the university website. This website offers you many important services. If you are a professor, you can log in after obtaining a university number and see the students registered in your subjects. In addition, you can add the grades of the interfaces after correcting them and communicate with the students, and if you are an assistant to the professor. If you are a student, you can register on the university’s website, see the marks of your duties.</p>
+
+    </div>
+
+    <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+
+    </div>
+    </section>
+
+<script type="text/javascript">
+
+    var card =document.getElementById("card");
+    function openRegister(){
+        card.style.transform = "rotateY(-180deg)";
+    }
+
+    function openLogin(){
+        card.style.transform = "rotateY(0deg)";
+    }
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+    var sliderNav = function(manual) {
+        btns.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+
+        contents.forEach((content) => {
+            content.classList.remove("active");
+        });
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+            sliderNav(i);
+
+        });
+    });
+   </script>
+
+<section class="campus" id="campus">
+    <h2 class="heading">
+            <span>C</span>
+            <span>a</span>
+            <span>m</span>
+            <span>p</span>
+            <span>u</span>
+            <span>s</span>
+    </h2>
+
+    <div class="box-container">
+
+        <div class="box">
+         <img src="campus.jpg"  alt="">
+        <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i>The Campus</h3>
+            <p>This is our university campus, we have one of the largest campuses in the entire Middle East, consisting of places provided for students' comfort  </p>
+<a href="#" class="btn">Read more</a>
+        </div>
+    </div>
+        <div class="box">
+            <img src="student.jpg"  alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i>Student dorms</h3>
+                <p>This is our university campus, we have one of the largest campuses in the entire Middle East, consisting of places provided for students' comfort  </p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="library.jpg"  alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i>Library</h3>
+                <p>This is our university campus, we have one of the largest campuses in the entire Middle East, consisting of places provided for students' comfort  </p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="pitch.jpg"  alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i>Large Football Pitch</h3>
+                <p>This is our university campus, we have one of the largest campuses in the entire Middle East, consisting of places provided for students' comfort  </p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="food.jpg"  alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i>Dining Hall</h3>
+                <p>This is our university campus, we have one of the largest campuses in the entire Middle East, consisting of places provided for students' comfort  </p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="garden.jpg"  alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i>Organic Garden</h3>
+                <p>This is our university campus, we have one of the largest campuses in the entire Middle East, consisting of places provided for students' comfort  </p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="gallery" id="gallery">
+    <h2 class="heading">
+        <span>G</span>
+        <span>a</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+    </h2>
+
+<div class="box-container">
+    <div class="box">
+        <img src="medical.jpg" alt="">
+        <div class="content">
+            <h3>Medical School</h3>
+            <p>We provide the largest medical school in the region with well-equipped facilities</p>
+            <a href="#" class="btn">more info</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="engsince.jpg" alt="">
+        <div class="content">
+            <h3>Engineering School</h3>
+            <p>We provide the largest Engineering school in the region with well-equipped facilities</p>
+            <a href="#" class="btn">more info</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="art.jpg" alt="">
+        <div class="content">
+            <h3>Art School</h3>
+            <p>We provide the largest art school in the region with well-equipped facilities</p>
+            <a href="#" class="btn">more info</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="law.jpg" alt="">
+        <div class="content">
+            <h3>Law School</h3>
+            <p>We provide the largest law school in the region with well-equipped facilities</p>
+            <a href="#" class="btn">more info</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="english.jpg" alt="">
+        <div class="content">
+            <h3>English School</h3>
+            <p>We provide the largest English school in the region with well-equipped facilities</p>
+            <a href="#" class="btn">more info</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="bussnis.png" alt="">
+        <div class="content">
+            <h3>Business School</h3>
+            <p>We provide the largest business school in the region with well-equipped facilities</p>
+            <a href="#" class="btn">more info</a>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<section class="about" id="about">
+    <h2 class="heading">
+        <span>A</span>
+        <span>b</span>
+        <span>o</span>
+        <span>u</span>
+        <span>t</span>
+        <span class="space"></span>
+        <span>u</span>
+        <span>s</span>
+    </h2>
+
+    <div class="box-container">
+
+
+        <div class="box">
+            <img src="pic1.png" alt="">
+            <h3>Dana Ramadan</h3>
+
+        </div>
+
+
+        <div class="box">
+            <img src="pic2.jpg" alt="">
+            <h3>Israa Ishtayh </h3>
+
+        </div>
+
+
+
+        <div class="box">
+            <img src="pic3.png" alt="">
+            <h3>Ranada Alawneh</h3>
+
+        </div>
+
+
+
+        <div class="box">
+            <img src="pic4.jpg" alt="">
+            <h3>Masa Masri</h3>
+
+
+    </div>
+
+        <div class="box">
+            <img src="pic5.jpg" alt="">
+            <h3>Asma Ja'afr</h3>
+
+        </div>
+    </div>
+
+
+
+</section>
+
+
+<section class="footer" id="contact">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>About</h3>
+            <p>We are a group of girls who love programming and design. We opened the Hackabellas company, which specializes in softwares and websites creation.Our base is in Palestine, and then after we became more popular,we opened other branches around the world. </p>
+        </div>
+        <div class="box">
+            <h3>branch locations</h3>
+            <a href="#">Palestine</a>
+            <a href="#">USA</a>
+            <a href="#">Korea</a>
+            <a href="#">China</a>
+            <a href="#">Germany</a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">campus</a>
+            <a href="#">gallery</a>
+            <a href="#">about</a>
+            <a href="#">contact</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+            <a href="#">Pinterest</a>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> created by <strong> HackaBellas </strong> | all rights reserved! </h1>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="script.js"></script>
+
+
+</body>
+
+
+
+</html>
+
